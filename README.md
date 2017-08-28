@@ -1,5 +1,5 @@
 # Dec_audio_wavelet_noise_pds 
-##Trabalho de PDS, envolvendo Discrete Wave Transform (DWT), para tratamento de ruido branco gaussiano aditivo em sinais de áudio.
+## Trabalho de PDS, envolvendo Discrete Wave Transform (DWT), para tratamento de ruido branco gaussiano aditivo em sinais de áudio.
 
 Este trabalho utilizara a linguagem python, para desenvolvimento dos scripts de foco principal, como a implementação da transformada wavelet e apresentação dos resultados. Usaremos a ferramenta Jupyter para elaboração do relatorio.
 
@@ -15,27 +15,27 @@ Instalando o Jupyter atravez de uma imagem docker da anaconda: "https://www.cont
 
 ## Metas
 
-[] Implementar blocos de processamento para realizar os estágios de analise e sintese de uma DWT (cascata de banco de filtros)
-[] Redigir relatório técnico, comparando o desempenho entre a DWT e filtragem passa-baixas convencional (aproximação de Butterworth, passa-baixa, especificações a determinar, a ser projetado usando uma ferramenta pronta como o fdatool do Matlab)
+[ ] Implementar blocos de processamento para realizar os estágios de analise e sintese de uma DWT (cascata de banco de filtros)
+[ ] Redigir relatório técnico, comparando o desempenho entre a DWT e filtragem passa-baixas convencional (aproximação de Butterworth, passa-baixa, especificações a determinar, a ser projetado usando uma ferramenta pronta como o fdatool do Matlab)
 
 ## Etapas
 
-[] Formar as duplas de trabalho
-[] Implementar as funções para cascata de banco de filtros
-[] Definir o sinal de áudio a ser usado como referência (sinal original, sem ruído)
-[] Determinar três sinais de teste, obtidos por contaminação da referência por ruído AWGN. Os sinais de teste resultantes deverão apresentar as seguintes SNRs:
+[ ] Formar as duplas de trabalho
+[ ] Implementar as funções para cascata de banco de filtros
+[ ] Definir o sinal de áudio a ser usado como referência (sinal original, sem ruído)
+[ ] Determinar três sinais de teste, obtidos por contaminação da referência por ruído AWGN. Os sinais de teste resultantes deverão apresentar as seguintes SNRs:
 	-  10  dB
 	-  0   dB
 	- -10  db
-[] Filtrar cada um dos sinais de teste usando:
+[ ] Filtrar cada um dos sinais de teste usando:
 	- Filtro Butterworth passa-baixas
 	- DWT usando SOFT e HARD thresholds
 	> A definir: especifiações do filtro Butterworth, wavelet-mãe e número de níveis de decomposição da DWT
-[] Avaliação dos resultados:
+[ ] Avaliação dos resultados:
 	- Comparação da SNR do sinal filtrado
 	- Avaliação subjetiva informal (opinião de pessoas)
 
-[]  Entrega de relatório técnico (05.09), códigos fonte (05.09), slides da apresentação (05.09) e apresentação em sala (06.09).
+[ ]  Entrega de relatório técnico (05.09), códigos fonte (05.09), slides da apresentação (05.09) e apresentação em sala (06.09).
 	- O relatório técnico deve apresentar um registro preciso do contéudo técnico estudado, e conter Resumo, Introdução, Base téorica, etodologia experimental, Resultados, Conclusões e Referências bibliográficas. Tal relatório não deve exceder 4 páginas.
 	- A apresenta¸c˜ao ser´a feita no dia 06.09 no hor´ario de aula, deve ser baseada no relat´orio t´ecnico e ter´a dura¸c˜ao de 10 min. Os crit´erios usados para avaliar as apresenta¸c˜oes incluem: uso de recursos de apresenta¸c˜ao (slides), numera¸c˜ao dos slides, estrutura da
 apresenta¸c˜ao (slide de t´ıtulo, agenda da apresenta¸c˜ao, conte´udo, conclus˜oes, referˆencias), corre¸c˜ao ortogr´afica e gramatical, express˜ao oral, corre¸c˜ao das informa¸c˜oes, uso do tempo.
