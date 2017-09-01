@@ -9,7 +9,7 @@ Instalando o Jupyter atravez de uma imagem docker da anaconda: "https://www.cont
 > $ docker build --tag anaconda_jupyter .
 
 ##### Comando para iniciar o container Jupyter
-> $ docker run -it -p 8888:8888 -v "Path_local":/opt/notebooks --name Jupyter anaconda_jupyter
+> $ docker run -it -p 8888:8888 -v "Path_local":/opt/notebooks -v "Path_local_config_file":/root/.jupyter --name Jupyter anaconda_jupyter
 
 OBS: Link referente a documentação para criar o arquivo da senha: http://testnb.readthedocs.io/en/stable/examples/Notebook/Configuring%20the%20Notebook%20and%20Server.html
 
