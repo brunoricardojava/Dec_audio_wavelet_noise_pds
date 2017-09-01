@@ -5,37 +5,38 @@ Este trabalho utilizara a linguagem python, para desenvolvimento dos scripts de 
 
 Instalando o Jupyter atravez de uma imagem docker da anaconda: "https://www.continuum.io/blog/developer-blog/anaconda-and-docker-better-together-reproducible-data-science"
 
-##### Comando para executar Jupyter como localhost do sistema
-> $ docker run -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser"
-## OBS: Mudei a forma como era feita, o comando acima precisa ser atualizado, tem que fazer upload da imagem gerada. Usar comandos que estão comentados no Dockerfile.
+##### Comando para criar uma imagem do Jupyter usando uma imagem do projeto Anaconda
+> $ docker build --tag anaconda_jupyter .
 
-##### Comando para iniciar a imagem da anaconda
-> $ docker run -i -t continuumio/anaconda3 /bin/bash
+##### Comando para iniciar o container Jupyter
+> $ docker run -it -p 8888:8888 --name Jupyter anaconda_jupyter:latest
+
+OBS: Link referente a documentação para criar o arquivo da senha: http://testnb.readthedocs.io/en/stable/examples/Notebook/Configuring%20the%20Notebook%20and%20Server.html
 
 
 ## Metas
 
-[ ] Implementar blocos de processamento para realizar os estágios de analise e sintese de uma DWT (cascata de banco de filtros)
-[ ] Redigir relatório técnico, comparando o desempenho entre a DWT e filtragem passa-baixas convencional (aproximação de Butterworth, passa-baixa, especificações a determinar, a ser projetado usando uma ferramenta pronta como o fdatool do Matlab)
+- [ ] Implementar blocos de processamento para realizar os estágios de analise e sintese de uma DWT (cascata de banco de filtros)
+- [ ] Redigir relatório técnico, comparando o desempenho entre a DWT e filtragem passa-baixas convencional (aproximação de Butterworth, passa-baixa, especificações a determinar, a ser projetado usando uma ferramenta pronta como o fdatool do Matlab)
 
 ## Etapas
 
-[ ] Formar as duplas de trabalho
-[ ] Implementar as funções para cascata de banco de filtros
-[ ] Definir o sinal de áudio a ser usado como referência (sinal original, sem ruído)
-[ ] Determinar três sinais de teste, obtidos por contaminação da referência por ruído AWGN. Os sinais de teste resultantes deverão apresentar as seguintes SNRs:
+- [ ] Formar as duplas de trabalho
+- [ ] Implementar as funções para cascata de banco de filtros
+- [ ] Definir o sinal de áudio a ser usado como referência (sinal original, sem ruído)
+- [ ] Determinar três sinais de teste, obtidos por contaminação da referência por ruído AWGN. Os sinais de teste resultantes deverão apresentar as seguintes SNRs:
 	-  10  dB
 	-  0   dB
 	- -10  db
-[ ] Filtrar cada um dos sinais de teste usando:
+- [ ] Filtrar cada um dos sinais de teste usando:
 	- Filtro Butterworth passa-baixas
 	- DWT usando SOFT e HARD thresholds
 	> A definir: especifiações do filtro Butterworth, wavelet-mãe e número de níveis de decomposição da DWT
-[ ] Avaliação dos resultados:
+- [ ] Avaliação dos resultados:
 	- Comparação da SNR do sinal filtrado
 	- Avaliação subjetiva informal (opinião de pessoas)
 
-[ ]  Entrega de relatório técnico (05.09), códigos fonte (05.09), slides da apresentação (05.09) e apresentação em sala (06.09).
+- [ ]  Entrega de relatório técnico (05.09), códigos fonte (05.09), slides da apresentação (05.09) e apresentação em sala (06.09).
 	- O relatório técnico deve apresentar um registro preciso do contéudo técnico estudado, e conter Resumo, Introdução, Base téorica, etodologia experimental, Resultados, Conclusões e Referências bibliográficas. Tal relatório não deve exceder 4 páginas.
 	- A apresenta¸c˜ao ser´a feita no dia 06.09 no hor´ario de aula, deve ser baseada no relat´orio t´ecnico e ter´a dura¸c˜ao de 10 min. Os crit´erios usados para avaliar as apresenta¸c˜oes incluem: uso de recursos de apresenta¸c˜ao (slides), numera¸c˜ao dos slides, estrutura da
 apresenta¸c˜ao (slide de t´ıtulo, agenda da apresenta¸c˜ao, conte´udo, conclus˜oes, referˆencias), corre¸c˜ao ortogr´afica e gramatical, express˜ao oral, corre¸c˜ao das informa¸c˜oes, uso do tempo.
